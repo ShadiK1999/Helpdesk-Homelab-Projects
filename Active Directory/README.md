@@ -61,11 +61,25 @@ The Domain Controller's IPv4 settings were configured to reflect the network dia
 
 ### Active Directory Domain Service
 
-1. Install AD DS 
-2. Create domain 
-3. create dedicated domain admin account
-4. Create _ADMINS organisational unit and add new account to it
+1. Begin AD DS Install: 
+
+The AD DS was installation process was accessed via server manager through the `Add Roles and Features` section. 
+
+2. Create the domain:
+
+The domain was created with default FQDN `mydomain.com`. After going through the wizard, the PC was restarted and the new domain was displayed on the login screen.
+
+3. Create an Organisational Unit:
+
+An OU was created with the name `_Admins` via the recently installed Active Directory User and Computers. This OU will be populated in the next step. 
+
+4. Create admin user account:
+
+A new user account was created with the prefix `a-` attached to the username, denoting that it is an admin account. The user was then made a member of `Domain Admins`, listing them in the `_Admins` OU.
+
 5. login as newly created admin account
+
+The DC was signed out and signed in again using the credentials on the newly created admin account.
 
 ### RAS/NAT - allows clients to access the internet through the domain controller
 
