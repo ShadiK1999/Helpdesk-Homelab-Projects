@@ -111,7 +111,14 @@ The DHCP router option was configured to allow users on the client PC's to acces
 
 ### Create Users
 
-1. download powershell script
+1. Download powershell script (Lab use only):
+
+A powershell script was downloaded from this [source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). The script creates 1000 user accounts on active directory.
+
+2. Run powershell script:
+
+The script was run within the DC, populated the `USERS` group.
+
 
 ## Client Testing
 
