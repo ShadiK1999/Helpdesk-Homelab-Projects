@@ -14,6 +14,10 @@ This project demonstrates the setup of a virtual environment containing 2 PCs:
 To complete this project the following steps were taken:
 1. Install hypervisor and set up virtual machines:
 2. Configure Domain Controller
+	- AD DS
+	- NAT
+	- DHCP
+	- Create Users
 3. Configure and test network with client PC
 
 ## Virtual Machine Setup
@@ -24,7 +28,7 @@ The hypervisor used for this project was VMWare Workstation Pro. The installatio
 
 2. Download Windows Server 2019 and Windows 10 ISO files:
 
-ISO files for these versions of windows were downloaded from the Microsoft Evaluation Center.
+ISO files for these versions of windows were downloaded from the Microsoft Evaluation Center via the following links:
 - [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)
 - [Windows 10](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)
 
@@ -37,35 +41,53 @@ Hardware delegation for each machine was as follows (note the Windows Server Mac
 Each machine was powered up to allow for the windows installation process to take place.
 
 ## Domain Controller Configuration
-  ### Setup
-	1. Change PC name to DC
-	2. Rename each NIC to distinguish them (Internet facing and internal network facing)
-	3. configure IPv4 for internal network
-  
-  ### Active Directory Domain Service
-	1. install AD DS via server manager
-	2. Create domain 
-	3. create dedicated domain admin account
-	4. Create _ADMINS organisational unit and add new account to it
-	5. login as newly created admin account
-  
-  ### RAS/NAT - allows clients to access the internet through the domain controller
-	1. Install Remote Access role via server manager
-	2. Open routing and remote access tool
-	3. Enable NAT from the configure and enable remote access wizard
-	4. select the internet facing NIC as the internet connection
 
-  ### DHCP
-	1. Install DHCP server via server manager
-	2. create DHCP Scope
-	3. Configure DHCP options
+### Setup
 
-  ### Create Users
-	1. download powershell script
+1. Change PC name:
+
+The Domain Controller PC was renamed to `Domain Controller` via system settings.
+
+2. Rename each NIC:
+
+For easy recognition later in the project, each network card was renamed to reflect the network they represent.
+
+3. Configure IPv4 for internal network:
+
+The Domain Controller's IPv4 settings were configured to reflect the network diagram.
+
+- IP: 172.16.0.1 /24
+- DNS: 127.0.0.1 (loopback address)
+
+### Active Directory Domain Service
+
+1. Install AD DS 
+2. Create domain 
+3. create dedicated domain admin account
+4. Create _ADMINS organisational unit and add new account to it
+5. login as newly created admin account
+
+### RAS/NAT - allows clients to access the internet through the domain controller
+
+1. Install Remote Access role via server manager
+2. Open routing and remote access tool
+3. Enable NAT from the configure and enable remote access wizard
+4. select the internet facing NIC as the internet connection
+
+### DHCP
+
+1. Install DHCP server via server manager
+2. create DHCP Scope
+3. Configure DHCP options
+
+### Create Users
+
+1. download powershell script
 
 ## Client Testing
-	1. Login to client
-	2. Open terminal and check connection with ipconfig
-		a. client should have been delegated an IP and gateway from dhcp server
-		b. client should be able to connect to the internet from their PC
-	3. login as a randomly created user to test user login
+
+1. Login to client
+2. Open terminal and check connection with ipconfig
+	- client should have been delegated an IP and gateway from dhcp server
+	- client should be able to connect to the internet from their PC
+3. login as a randomly created user to test user login
