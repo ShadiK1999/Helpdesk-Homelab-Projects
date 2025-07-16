@@ -1,17 +1,29 @@
-# ACTIVE DIRECTORY
+# Active Directory
 
 This project demonstrates the setup of a virtual environment containing 2 PCs:
 
 * `Domain Controller` acts as the server which runs Active Directory Domain Service, creates users and groups, and other services that will be discussed in this project.
 * `Client 1` acts at the client PC and simulates an employee's workstation
 
-## VM SETUP
+## Network Diagram
+
+![Network Diagram](/Active%20Directory/Screenshots/topoly.png)
+
+## Steps Taken
+
+To complete this project the following steps were taken:
+1. Install hypervisor and set up virtual machines
+2. Configure Domain Controller
+3. Configure and test network with client PC
+
+## Virtual Machine Setup
+
 	1.Install VMWare Workstation Pro 
 	2.Download Windows Server 2019 and Windows 10 iso's from Microsoft evaluation centre
 	3.Configure hardware for VM's (additional NIC for windows server VM)
 	4.power up VM's and install iso's (run through windows install)
 
-## DOMAIN CONTROLLER
+## Domain Controller Configuration
   ### Setup
 	1. Change PC name to DC
 	2. Rename each NIC to distinguish them (Internet facing and internal network facing)
@@ -35,10 +47,10 @@ This project demonstrates the setup of a virtual environment containing 2 PCs:
 	2. create DHCP Scope
 	3. Configure DHCP options
 
-  ###CREATE USERS
+  ### Create Users
 	1. download powershell script
 
-##CLIENT COMPUTER
+## Client Testing
 	1. Login to client
 	2. Open terminal and check connection with ipconfig
 		a. client should have been delegated an IP and gateway from dhcp server
