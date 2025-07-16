@@ -63,7 +63,7 @@ The Domain Controller's IPv4 settings were configured to reflect the network dia
 
 1. Begin AD DS Install: 
 
-The AD DS was installation process was accessed via server manager through the `Add Roles and Features` section. 
+The AD DS installation process was accessed via server manager through the `Add Roles and Features` section. 
 
 2. Create the domain:
 
@@ -71,11 +71,11 @@ The domain was created with default FQDN `mydomain.com`. After going through the
 
 3. Create an Organisational Unit:
 
-An OU was created with the name `_Admins` via the recently installed Active Directory User and Computers. This OU will be populated in the next step. 
+An OU was created with the name `_ADMINS` via the recently installed Active Directory User and Computers. This OU will be populated in the next step. 
 
 4. Create admin user account:
 
-A new user account was created with the prefix `a-` attached to the username, denoting that it is an admin account. The user was then made a member of `Domain Admins`, listing them in the `_Admins` OU.
+A new user account was created with the prefix `a-` attached to the username, denoting that it is an admin account. The user was then made a member of `Domain Admins`, listing them in the `_ADMINS` OU.
 
 5. login as newly created admin account
 
@@ -83,10 +83,17 @@ The DC was signed out and signed in again using the credentials on the newly cre
 
 ### RAS/NAT - allows clients to access the internet through the domain controller
 
-1. Install Remote Access role via server manager
-2. Open routing and remote access tool
-3. Enable NAT from the configure and enable remote access wizard
-4. select the internet facing NIC as the internet connection
+1. Install Remote Access role:
+
+The Remote Access installation process was accessed via server manager through the `Add Roles and Features` section. 
+
+2. Enable NAT:
+
+NAT was enabled through the `Configure and Enable Remote Access` wizard
+
+3. Select External NIC for NAT
+
+During the enabling process, the internet facing NIC was selected as the internet connection.
 
 ### DHCP
 
