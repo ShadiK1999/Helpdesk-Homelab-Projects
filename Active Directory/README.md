@@ -98,8 +98,16 @@ During the enabling process, the internet facing NIC was selected as the interne
 ### DHCP
 
 1. Install DHCP server via server manager
+
+The DHCP installation process was accessed via server manager through the `Add Roles and Features` section, then opened via the tools menu.
+
 2. create DHCP Scope
+
+The DHCP scope was configured to reflect the network diagram with a range from `172.16.0.100 - 172.16.0.200 /24`
+
 3. Configure DHCP options
+
+The DHCP router option was configured to allow users on the client PC's to access the internet.
 
 ### Create Users
 
