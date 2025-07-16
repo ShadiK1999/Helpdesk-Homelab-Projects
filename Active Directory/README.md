@@ -12,16 +12,29 @@ This project demonstrates the setup of a virtual environment containing 2 PCs:
 ## Steps Taken
 
 To complete this project the following steps were taken:
-1. Install hypervisor and set up virtual machines
+1. Install hypervisor and set up virtual machines:
 2. Configure Domain Controller
 3. Configure and test network with client PC
 
 ## Virtual Machine Setup
 
-	1.Install VMWare Workstation Pro 
-	2.Download Windows Server 2019 and Windows 10 iso's from Microsoft evaluation centre
-	3.Configure hardware for VM's (additional NIC for windows server VM)
-	4.power up VM's and install iso's (run through windows install)
+1. Install Hypervisor:
+ 
+The hypervisor used for this project was VMWare Workstation Pro. The installation software can be downloaded from Broadcom's website [here](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion).
+
+2. Download Windows Server 2019 and Windows 10 ISO files:
+
+ISO files for these versions of windows were downloaded from the Microsoft Evaluation Center.
+- [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)
+- [Windows 10](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)
+
+3. Configure hardware for Virtual Machines (additional NIC for windows server VM)
+
+Hardware delegation for each machine was as follows (note the Windows Server Machine has an additional network card to facilitate both internal and external networks):
+
+4. Power up virtual machines:
+
+Each machine was powered up to allow for the windows installation process to take place.
 
 ## Domain Controller Configuration
   ### Setup
