@@ -113,7 +113,7 @@ The DHCP router option was configured to allow users on the client PC's to acces
 
 1. Download powershell script (Lab use only):
 
-A powershell script was downloaded from this [source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). The script creates 1000 user accounts on active directory.
+A powershell script was downloaded from this [source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). The script creates 1000 user accounts on active directory and adds them to an OU named `_USERS`.
 
 2. Run powershell script:
 
@@ -123,7 +123,19 @@ The script was run within the DC, populated the `USERS` group.
 ## Client Testing
 
 1. Login to client
-2. Open terminal and check connection with ipconfig
+
+The Client PC was logged into to test the DC configurations.
+
+2. The command prompt was opened to check the following:
+	
 	- client should have been delegated an IP and gateway from dhcp server
 	- client should be able to connect to the internet from their PC
-3. login as a randomly created user to test user login
+
+3. Add Client PC to the Domain:
+
+The client PC was added to the `mydomain.com` domain via the PC system settings. This was verfied on the DC through Active Directory Users and Computers. 
+
+4. Log in as random user:
+
+The client PC was signed out and credentials of a random user created from the powershell script was used log back in.
+
