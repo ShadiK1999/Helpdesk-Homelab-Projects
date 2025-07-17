@@ -48,9 +48,16 @@ Each machine was powered up to allow for the windows installation process to tak
 
 The Domain Controller PC was renamed to `Domain Controller` via system settings.
 
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/2%20rename%20PC.png)                 |
+
 2. Rename each NIC:
 
 For easy recognition later in the project, each network card was renamed to reflect the network they represent.
+| Before NIC name change .                     | After NIC name change.																			|
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/1%20determine%20NIC%20connections%20and%20rename.png)                 |																						|
 
 3. Configure IPv4 for internal network:
 
@@ -59,27 +66,51 @@ The Domain Controller's IPv4 settings were configured to reflect the network dia
 - IP: 172.16.0.1 /24
 - DNS: 127.0.0.1 (loopback address)
 
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/3%20configure%20internal%20ipv4.png)                 |
+
 ### Active Directory Domain Service
 
 1. Begin AD DS Install: 
 
-The AD DS installation process was accessed via server manager through the `Add Roles and Features` section. 
+The AD DS installation process was accessed via server manager through the `Add Roles and Features` section.
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/4%20install%20ADDS.png)                 |
 
 2. Create the domain:
 
 The domain was created with default FQDN `mydomain.com`. After going through the wizard, the PC was restarted and the new domain was displayed on the login screen.
 
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/5%20adding%20new%20domain.png)                 						|![](/Screenshots/7%20org%20unit.png)                					  |
+
 3. Create an Organisational Unit:
 
 An OU was created with the name `_ADMINS` via the recently installed Active Directory User and Computers. This OU will be populated in the next step. 
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/7%20org%20unit.png)                 |
 
 4. Create admin user account:
 
 A new user account was created with the prefix `a-` attached to the username, denoting that it is an admin account. The user was then made a member of `Domain Admins`, listing them in the `_ADMINS` OU.
 
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/8%20new%20admin%20user%20account.png)                 						|![](/Screenshots/10%20make%20admin.png)                					  |
+
 5. login as newly created admin account
 
 The DC was signed out and signed in again using the credentials on the newly created admin account.
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/11%20login%20as%20new%20user.png)                 |
 
 ### RAS/NAT - allows clients to access the internet through the domain controller
 
@@ -87,13 +118,25 @@ The DC was signed out and signed in again using the credentials on the newly cre
 
 The Remote Access installation process was accessed via server manager through the `Add Roles and Features` section. 
 
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/11%20add%20remote%20access%20role%20for%20NAT.png)                 |
+
 2. Enable NAT:
 
 NAT was enabled through the `Configure and Enable Remote Access` wizard
 
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/12%20configure%20and%20enable%20RA.png)                 				|![](/Screenshots/13%20select%20NAT.png)                					  		  |
+
 3. Select External NIC for NAT
 
 During the enabling process, the internet facing NIC was selected as the internet connection.
+
+| Rename PC input in system settings.                     								|
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/14%20select%20internet%20facing%20nic.png)                 			|
 
 ### DHCP
 
@@ -122,18 +165,20 @@ The script was run within the DC, populated the `USERS` group.
 
 ## Client Testing
 
-1. Login to client
+1. Log into client:
 
 The Client PC was logged into to test the DC configurations.
 
-2. The command prompt was opened to check the following:
-	
-	- client should have been delegated an IP and gateway from dhcp server
-	- client should be able to connect to the internet from their PC
+2. Check client connectivity:
+
+The command prompt was opened to check the following:
+
+- client should have been delegated an IP and gateway from dhcp server
+- client should be able to connect to the internet from their PC
 
 3. Add Client PC to the Domain:
 
-The client PC was added to the `mydomain.com` domain via the PC system settings. This was verfied on the DC through Active Directory Users and Computers. 
+The client PC was added to the `mydomain.com` domain via the PC system settings. This was verified on the DC through Active Directory Users and Computers. 
 
 4. Log in as random user:
 
