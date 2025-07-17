@@ -66,7 +66,7 @@ The Domain Controller's IPv4 settings were configured to reflect the network dia
 - IP: 172.16.0.1 /24
 - DNS: 127.0.0.1 (loopback address)
 
-| Rename PC input in system settings.                     |
+| Assign IP to Internal NIC via IPv4 properties.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/3%20configure%20internal%20ipv4.png)                 |
 
@@ -76,7 +76,7 @@ The Domain Controller's IPv4 settings were configured to reflect the network dia
 
 The AD DS installation process was accessed via server manager through the `Add Roles and Features` section.
 
-| Rename PC input in system settings.                     |
+| Selecting AD DS from `Add Roles and Features`.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/4%20install%20ADDS.png)                 |
 
@@ -84,15 +84,15 @@ The AD DS installation process was accessed via server manager through the `Add 
 
 The domain was created with default FQDN `mydomain.com`. After going through the wizard, the PC was restarted and the new domain was displayed on the login screen.
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Configuring domain name in the AD DS wizard.                     								|Newly created domain displayed on login screen.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/5%20adding%20new%20domain.png)                 						|![](/Screenshots/7%20org%20unit.png)                					  |
+| ![](/Screenshots/5%20adding%20new%20domain.png)                 						|![](/Screenshots/6%20new%20login%20screen%20post%20domain.png)                					  			  |
 
 3. Create an Organisational Unit:
 
 An OU was created with the name `_ADMINS` via the recently installed Active Directory User and Computers. This OU will be populated in the next step. 
 
-| Rename PC input in system settings.                     |
+| Creating new Organisational Unit object.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](/Screenshots/7%20org%20unit.png)                 |
 
@@ -100,7 +100,7 @@ An OU was created with the name `_ADMINS` via the recently installed Active Dire
 
 A new user account was created with the prefix `a-` attached to the username, denoting that it is an admin account. The user was then made a member of `Domain Admins`, listing them in the `_ADMINS` OU.
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Creating new user account.                     								|Adding user to `Domain Admins`.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/8%20new%20admin%20user%20account.png)                 						|![](/Screenshots/10%20make%20admin.png)                					  |
 
@@ -108,7 +108,7 @@ A new user account was created with the prefix `a-` attached to the username, de
 
 The DC was signed out and signed in again using the credentials on the newly created admin account.
 
-| Rename PC input in system settings.                     |
+| Signing in as newly created admin user.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](/Screenshots/11%20login%20as%20new%20user.png)                 |
 
@@ -118,7 +118,7 @@ The DC was signed out and signed in again using the credentials on the newly cre
 
 The Remote Access installation process was accessed via server manager through the `Add Roles and Features` section. 
 
-| Rename PC input in system settings.                     |
+| Selecting Remote Access from `Add Roles and Features`.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](/Screenshots/11%20add%20remote%20access%20role%20for%20NAT.png)                 |
 
@@ -126,7 +126,7 @@ The Remote Access installation process was accessed via server manager through t
 
 NAT was enabled through the `Configure and Enable Remote Access` wizard
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Opening `Configure and Enable Remote Access` wizard.                     								| Enabling NAT through the wizard.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/12%20configure%20and%20enable%20RA.png)                 				|![](/Screenshots/13%20select%20NAT.png)                					  		  |
 
@@ -134,7 +134,7 @@ NAT was enabled through the `Configure and Enable Remote Access` wizard
 
 During the enabling process, the internet facing NIC was selected as the internet connection.
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Selecting `_INTERNET_` NIC for internet connection.                     								|NAT successfully configured.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/14%20select%20internet%20facing%20nic.png)                 						|![](/Screenshots/15%20successfully%20configured.png)                					  |
 
@@ -144,15 +144,15 @@ During the enabling process, the internet facing NIC was selected as the interne
 
 The DHCP installation process was accessed via server manager through the `Add Roles and Features` section, then opened via the tools menu.
 
-| Rename PC input in system settings.                     |
-| ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/17%20installed%20dhcp%20role.png)                 |
+| Selecting DHCP from `Add Roles and Features`.                     								|DHCP tool opened.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![]()                 						|![](/Screenshots/17%20installed%20dhcp%20role.png)                					  |
 
 2. create DHCP Scope
 
 The DHCP scope was configured to reflect the network diagram with a range from `172.16.0.100 - 172.16.0.200 /24`
 
-| Rename PC input in system settings.                     |
+| Configuring DHCP scope via the New Scope wizard.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](/Screenshots/18%20create%20scope.png)                 |
 
@@ -172,7 +172,7 @@ A powershell script was downloaded from this [source](https://github.com/joshmad
 
 2. Run powershell script:
 
-The script was run within the DC, populated the `USERS` group.
+The script was run within the DC and populated the `_USERS` group.
 
 
 ## Client Testing
@@ -188,7 +188,7 @@ The command prompt was opened to check the following:
 - client should have been delegated an IP and gateway from dhcp server
 - client should be able to connect to the internet from their PC
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| using command `ipconfig` to view client network information.                     								|using the `ping` command to determine internet connectivity.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/20%20check%20config%20for%20client%20computer.png)                 						|![](/Screenshots/21%20client%20can%20ping%20the%20internet%20.png)                					  |
 
@@ -196,7 +196,7 @@ The command prompt was opened to check the following:
 
 The client PC was added to the `mydomain.com` domain via the PC system settings. This was verified on the DC through Active Directory Users and Computers. 
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Adding Client 1 to the domain via system settings.                     								|Confirming Client 1 has joined the domain.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/22%20join%20client%201%20to%20domain.png)                 						|![](/Screenshots/24%20AD%20shows%20client%201%20.png)                					  |
 
@@ -204,7 +204,7 @@ The client PC was added to the `mydomain.com` domain via the PC system settings.
 
 The client PC was signed out and credentials of a random user created from the powershell script was used log back in.
 
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| Logging in as random user.                     								|Successful login confirmed.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](/Screenshots/25%20login%20with%20randomly%20created%20user%20account.png)                 						|![](/Screenshots/26%20confirmed%20random%20user%20login.png)                					  |
 
