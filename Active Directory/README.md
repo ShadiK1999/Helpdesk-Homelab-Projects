@@ -134,9 +134,9 @@ NAT was enabled through the `Configure and Enable Remote Access` wizard
 
 During the enabling process, the internet facing NIC was selected as the internet connection.
 
-| Rename PC input in system settings.                     								|
-| ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/14%20select%20internet%20facing%20nic.png)                 			|
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/14%20select%20internet%20facing%20nic.png)                 						|![](/Screenshots/15%20successfully%20configured.png)                					  |
 
 ### DHCP
 
@@ -144,19 +144,31 @@ During the enabling process, the internet facing NIC was selected as the interne
 
 The DHCP installation process was accessed via server manager through the `Add Roles and Features` section, then opened via the tools menu.
 
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/17%20installed%20dhcp%20role.png)                 |
+
 2. create DHCP Scope
 
 The DHCP scope was configured to reflect the network diagram with a range from `172.16.0.100 - 172.16.0.200 /24`
 
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](/Screenshots/18%20create%20scope.png)                 |
+
 3. Configure DHCP options
 
 The DHCP router option was configured to allow users on the client PC's to access the internet.
-
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![]()                 						|![]()                					  |
 ### Create Users
 
 1. Download powershell script (Lab use only):
 
 A powershell script was downloaded from this [source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). The script creates 1000 user accounts on active directory and adds them to an OU named `_USERS`.
+
+
 
 2. Run powershell script:
 
@@ -176,11 +188,23 @@ The command prompt was opened to check the following:
 - client should have been delegated an IP and gateway from dhcp server
 - client should be able to connect to the internet from their PC
 
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/20%20check%20config%20for%20client%20computer.png)                 						|![](/Screenshots/21%20client%20can%20ping%20the%20internet%20.png)                					  |
+
 3. Add Client PC to the Domain:
 
 The client PC was added to the `mydomain.com` domain via the PC system settings. This was verified on the DC through Active Directory Users and Computers. 
 
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/22%20join%20client%201%20to%20domain.png)                 						|![](/Screenshots/24%20AD%20shows%20client%201%20.png)                					  |
+
 4. Log in as random user:
 
 The client PC was signed out and credentials of a random user created from the powershell script was used log back in.
+
+| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](/Screenshots/25%20login%20with%20randomly%20created%20user%20account.png)                 						|![](/Screenshots/26%20confirmed%20random%20user%20login.png)                					  |
 
