@@ -208,7 +208,7 @@ The client PC was added to the `mydomain.com` domain via the PC system settings.
 
 4. Log in as random user:
 
-The client PC was signed out and credentials of a random user created from the powershell script was used log back in.
+The client PC was signed out and credentials of a random user created from the powershell script was used to log back in.
 
 | Logging in as random user.                     								|Successful login confirmed.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
