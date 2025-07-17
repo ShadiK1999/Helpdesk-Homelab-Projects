@@ -7,7 +7,7 @@ This project demonstrates the setup of a virtual environment containing 2 PCs:
 
 ## Network Diagram
 
-![Network Diagram](/Active%20Directory/Screenshots/topoly.png)
+![Network Diagram](./Screenshots/topoly.png)
 
 ## Steps Taken
 
@@ -176,9 +176,9 @@ A powershell script was downloaded from this [source](https://github.com/joshmad
 
 The script was run within the DC and populated the `_USERS` group.
 
-| Create Users powershell script.                     								|Confirmation of created users.                   								  |
+| Create Users powershell script.                     								|Confirmation of created users via AD Users and Computers.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](./Screenshots/30%20powershell.png)                 						|![]()                					  |
+| ![](./Screenshots/30%20powershell.png)                 						|![](./Screenshots/31%20users.png)                					  |
 
 
 ## Client Testing
