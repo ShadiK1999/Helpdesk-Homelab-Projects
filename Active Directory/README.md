@@ -86,7 +86,7 @@ The domain was created with default FQDN `mydomain.com`. After going through the
 
 | Configuring domain name in the AD DS wizard.                     								|Newly created domain displayed on login screen.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/5%20adding%20new%20domain.png)                 						|![](/Screenshots/6%20new%20login%20screen%20post%20domain.png)                					  			  |
+| ![](./Screenshots/5%20adding%20new%20domain.png)                 						|![](./Screenshots/6%20new%20login%20screen%20post%20domain.png)                					  			  |
 
 3. Create an Organisational Unit:
 
@@ -94,7 +94,7 @@ An OU was created with the name `_ADMINS` via the recently installed Active Dire
 
 | Creating new Organisational Unit object.                     |
 | ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/7%20org%20unit.png)                 |
+| ![](./Screenshots/7%20org%20unit.png)                 |
 
 4. Create admin user account:
 
@@ -102,7 +102,7 @@ A new user account was created with the prefix `a-` attached to the username, de
 
 | Creating new user account.                     								|Adding user to `Domain Admins`.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/8%20new%20admin%20user%20account.png)                 						|![](/Screenshots/10%20make%20admin.png)                					  |
+| ![](./Screenshots/8%20new%20admin%20user%20account.png)                 						|![](./Screenshots/10%20make%20admin.png)                					  |
 
 5. login as newly created admin account
 
@@ -110,7 +110,7 @@ The DC was signed out and signed in again using the credentials on the newly cre
 
 | Signing in as newly created admin user.                     |
 | ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/11%20login%20as%20new%20user.png)                 |
+| ![](./Screenshots/11%20login%20as%20new%20user.png)                 |
 
 ### RAS/NAT - allows clients to access the internet through the domain controller
 
@@ -120,7 +120,7 @@ The Remote Access installation process was accessed via server manager through t
 
 | Selecting Remote Access from `Add Roles and Features`.                     |
 | ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/11%20add%20remote%20access%20role%20for%20NAT.png)                 |
+| ![](./Screenshots/11%20add%20remote%20access%20role%20for%20NAT.png)                 |
 
 2. Enable NAT:
 
@@ -128,7 +128,7 @@ NAT was enabled through the `Configure and Enable Remote Access` wizard
 
 | Opening `Configure and Enable Remote Access` wizard.                     								| Enabling NAT through the wizard.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/12%20configure%20and%20enable%20RA.png)                 				|![](/Screenshots/13%20select%20NAT.png)                					  		  |
+| ![](./Screenshots/12%20configure%20and%20enable%20RA.png)                 				|![](./Screenshots/13%20select%20NAT.png)                					  		  |
 
 3. Select External NIC for NAT
 
@@ -136,7 +136,7 @@ During the enabling process, the internet facing NIC was selected as the interne
 
 | Selecting `_INTERNET_` NIC for internet connection.                     								|NAT successfully configured.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/14%20select%20internet%20facing%20nic.png)                 						|![](/Screenshots/15%20successfully%20configured.png)                					  |
+| ![](./Screenshots/14%20select%20internet%20facing%20nic.png)                 						|![](./Screenshots/15%20successfully%20configured.png)                					  |
 
 ### DHCP
 
@@ -146,7 +146,7 @@ The DHCP installation process was accessed via server manager through the `Add R
 
 | Selecting DHCP from `Add Roles and Features`.                     								|DHCP tool opened.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![]()                 						|![](/Screenshots/17%20installed%20dhcp%20role.png)                					  |
+| ![]()                 						|![](./Screenshots/17%20installed%20dhcp%20role.png)                					  |
 
 2. create DHCP Scope
 
@@ -154,7 +154,7 @@ The DHCP scope was configured to reflect the network diagram with a range from `
 
 | Configuring DHCP scope via the New Scope wizard.                     |
 | ------------------------------------------------------------------------------------- |
-| ![](/Screenshots/18%20create%20scope.png)                 |
+| ![](./Screenshots/18%20create%20scope.png)                 |
 
 3. Configure DHCP options
 
@@ -190,7 +190,7 @@ The command prompt was opened to check the following:
 
 | using command `ipconfig` to view client network information.                     								|using the `ping` command to determine internet connectivity.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/20%20check%20config%20for%20client%20computer.png)                 						|![](/Screenshots/21%20client%20can%20ping%20the%20internet%20.png)                					  |
+| ![](./Screenshots/20%20check%20config%20for%20client%20computer.png)                 						|![](./Screenshots/21%20client%20can%20ping%20the%20internet%20.png)                					  |
 
 3. Add Client PC to the Domain:
 
@@ -198,7 +198,7 @@ The client PC was added to the `mydomain.com` domain via the PC system settings.
 
 | Adding Client 1 to the domain via system settings.                     								|Confirming Client 1 has joined the domain.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/22%20join%20client%201%20to%20domain.png)                 						|![](/Screenshots/24%20AD%20shows%20client%201%20.png)                					  |
+| ![](./Screenshots/22%20join%20client%201%20to%20domain.png)                 						|![](./Screenshots/24%20AD%20shows%20client%201%20.png)                					  |
 
 4. Log in as random user:
 
@@ -206,5 +206,5 @@ The client PC was signed out and credentials of a random user created from the p
 
 | Logging in as random user.                     								|Successful login confirmed.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![](/Screenshots/25%20login%20with%20randomly%20created%20user%20account.png)                 						|![](/Screenshots/26%20confirmed%20random%20user%20login.png)                					  |
+| ![](./Screenshots/25%20login%20with%20randomly%20created%20user%20account.png)                 						|![](./Screenshots/26%20confirmed%20random%20user%20login.png)                					  |
 
