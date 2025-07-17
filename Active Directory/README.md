@@ -57,7 +57,7 @@ The Domain Controller PC was renamed to `Domain Controller` via system settings.
 For easy recognition later in the project, each network card was renamed to reflect the network they represent.
 | Before NIC name change .                     | After NIC name change.																			|
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| ![](./Screenshots/1%20determine%20NIC%20connections%20and%20rename.png)                 |																						|
+| ![](./Screenshots/1%20determine%20NIC%20connections%20and%20rename.png)                 |	![](./Screenshots/28%20NIC%20names%20changed.png)																				|
 
 3. Configure IPv4 for internal network:
 
@@ -146,7 +146,7 @@ The DHCP installation process was accessed via server manager through the `Add R
 
 | Selecting DHCP from `Add Roles and Features`.                     								|DHCP tool opened.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![]()                 						|![](./Screenshots/17%20installed%20dhcp%20role.png)                					  |
+| ![](./Screenshots/27%20dhcp%20role.png)                 						|![](./Screenshots/17%20installed%20dhcp%20role.png)                					  |
 
 2. create DHCP Scope
 
@@ -159,9 +159,11 @@ The DHCP scope was configured to reflect the network diagram with a range from `
 3. Configure DHCP options
 
 The DHCP router option was configured to allow users on the client PC's to access the internet.
-| Rename PC input in system settings.                     								|Rename PC input in system settings.                   								  |
-| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
-| ![]()                 						|![]()                					  |
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/29%20DHCP%20Options.png)                 |
+
 ### Create Users
 
 1. Download powershell script (Lab use only):
@@ -173,6 +175,10 @@ A powershell script was downloaded from this [source](https://github.com/joshmad
 2. Run powershell script:
 
 The script was run within the DC and populated the `_USERS` group.
+
+| Create Users powershell script.                     								|Confirmation of created users.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/30%20powershell.png)                 						|![]()                					  |
 
 
 ## Client Testing
