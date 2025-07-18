@@ -108,3 +108,33 @@ The ticket was closed by pressing the `Close` button on the right hand side of t
 | ![](./Screenshots/Screenshot%202025-07-18%20at%204.33.23 pm.png)                 |
 
 ## Ticket Escalation
+
+The goal of this task is to understand when and how to escalate a ticket.
+
+Scenario: A user can't access the financial database. An attempt to reset credentials was made as well as basic network checks.
+Issue: The technician is not part of the correct team so assign these credentials to the user and resolve the ticket.
+
+1. See if software has an `Escalate` option:
+
+It was found that Spiceworks does not offer escalate functionality, so the ticket must be reassigned manually.
+
+| Spiceworks ticket options - no escalate option.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/14%20check%20for%20escalate.png)                 |
+
+2. Assign ticket to member of relevant team:
+
+Ticket was reassigned to the a different team by inputting their email in the `Assignee` input field.
+
+| Ticket reassignment.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/15%20reassign%20ticket.png)                 |
+
+3. Send message to  newly assigned ticket recipient:
+
+A message was sent within the ticket to notify both the user and the newly assigned team member that the ticket has been escalated. 
+
+| Escalation message sent within ticket messaging section.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/16%20message%20sent%20to%20team%20member.png)                 |
+
