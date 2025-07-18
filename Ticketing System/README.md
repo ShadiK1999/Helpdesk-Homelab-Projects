@@ -1,5 +1,7 @@
 # Ticketing System Labs
 
+This project demonstrates the use of best practices when addressing tickets via the online ticketing syestem, Spiceworks.
+
 ## What's Covered
 
 1. Spiceworks Setup
