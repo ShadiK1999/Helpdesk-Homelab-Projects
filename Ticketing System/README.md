@@ -37,6 +37,8 @@ Once the setup form was completed, the help desk ticketing system was opened.
 
 ## Ticket Creation
 
+The goal of this task is to understand how tickets are created and catagorised.
+
 1. Begin ticket creation process:
 
 Navigated to the `Create Ticket` button and clicked, opening the ticket creation form.
@@ -70,5 +72,39 @@ The `Create` button was pressed and the newly created ticket was displayed on th
 | ![](./Screenshots/9%20ticket%20created.png)                 |
 
 ## Ticket Closure Checklist
+
+The goal of this task is to ensure that the ticket is properly resolved and documented.
+
+For this example, it is assumed that the issue has been resolved and all that is left is to verify with the user and close the ticket.
+
+| Ticket to be closed.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/10%20ticket%20to%20be%20resolved.png)                 |
+
+1. Verify with user:
+
+Once the issue was resolved on the backend, a message was sent to confirm with the user.
+
+| Message to the user.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/11%20message%20to%20user.png)                 |
+
+2. Document resolved issue with internal notes:
+
+Once confirmation was received from the user, the message type was changed to an internal not via dropdown menu.
+
+The internal note was used to document the steps taken to fix issue in case other technicians have similar tickets to resolve.
+
+| Message type dropdown menu.                     								|Sent internal note.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/12%20change%20to%20internal%20note.png)                 						|![](./Screenshots/13%20post%20internal%20note.png)                					  |
+
+3. Close the ticket:
+
+The ticket was closed by pressing the `Close` button on the right hand side of the display.
+
+| The `Close` button.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/Screenshot%202025-07-18%20at%204.33.23 pm.png)                 |
 
 ## Ticket Escalation
