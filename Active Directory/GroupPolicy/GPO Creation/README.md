@@ -34,19 +34,19 @@ Before this lab began a few configuration changes were made to the environment:
 2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
 3. In the GPO creation window, the new GPO was named "password policy"
 
-| Name new GPO.                     |
+| Name Password Policy GPO.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/2%20create%20new%20gpo.png)                 |
 
 4. Once created, the GPO was right-clicked to access the editing window.
 
-| Rename PC input in system settings.                     |
+| Group Policy Management Editor. .                     |
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/3%20policy%20editor.png)                 |
 
-5. Navigated to `Computer Configurations > Policies > Windows Settings > Security Settings > Account Policies > Password Policy`.
+5. Navigated to `Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy`.
 
-| Rename PC input in system settings.                     |
+| Password policy features.                     |
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/4%20password%20policy.png)                 |
 
@@ -61,36 +61,78 @@ Before this lab began a few configuration changes were made to the environment:
 
 
 ## Create Drive Mapping GPO
-1. open GPMC
-2. right click domain and select create new gpo
-3. name GPO "Drive Mapping"
-4. right click GPO to edit
-5. navigate to User Configuration > Preferences > Windows Setting > Drive Maps
-6. right click Mapped Drive location and select new > mapped drive
-7. specify drive location and what drive letter to use
-8. verify drive is there
+1. The `Group Policy Management Console` was re-accessed.
+2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
+3. In the GPO creation window, the new GPO was named "password policy"
+
+| Name Drive Mapping GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/8%20create%20new%20gpo.png)                 |
+
+4. Once created, the GPO was right-clicked to access the editing window.
+5. Navigated to `User Configuration > Preferences > Windows Setting > Drive Maps`
+
+| Dive Maps configuration window.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/9%20drive%20maps.png)                 |
+
+6. The Drive Maps location was right-clicked and `new > mapped drive` was selected.
+7. The drive location was specified in the window and a drive letter was selected to use. In this lab, the `E:` drive was selected.
+
+| Creating new network drive.                     								|Verifying new network drive has been created.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/10%20new%20drive%20properties.png)                 						|![](./Screenshots/11%20new%20drive%20configures.png)                					  |
+
+note: there is no actual network drive and only an example path was provided.
 
 ## Create Desktop Wallpaper Policy GPO
-1. open GPMC
-2. right click domain and select create new gpo
-3. name GPO "Desktop Wallpaper"
-4. right click GPO to edit
-5. navigate to User Configuration > Administrative Templates > Desktop > Desktop > Desktop Wallpaper
-6. click Enables to enable the policy
-7. enter wallpaper path and style
-8. click apply and okay
+1. The `Group Policy Management Console` was re-accessed.
+2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
+3. In the GPO creation window, the new GPO was named "Desktop Wallpaper"
+
+| Name Drive Mapping GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/)                 |
+
+4. Once created, the GPO was right-clicked to access the editing window.
+5. Navigated to `User Configuration > Administrative Templates > Desktop > Desktop > Desktop Wallpaper`
+
+| Desktop policy features.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/12%20desktop%20wallpaper.png)                 |
+
+6. Once opened, the policy was enabled and path as well as a style was provided for the new wallpaper.
+
+| Configuring desktop wallpaper policy.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/13%20edit%20wallpaper%20policy.png)                 |
 
 ## Create Restrict Access to Control Panel GPO
-1. open GPMC
-2. right click domain and select create new gpo
-3. name GPO "Desktop Wallpaper"
-4. right click GPO to edit
-5. navigate to User Configuration > Administrative Templates > Control Panel > Prohibit access to Control Panel and PC settings
-6. click Enabled
-7. Click Apply and Okay
+1. The `Group Policy Management Console` was re-accessed.
+2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
+3. In the GPO creation window, the new GPO was named "password policy"
+
+| Name Restrict Control Panel GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/14%20create%20new%20gpo.png)                 |
+
+4. Once created, the GPO was right-clicked to access the editing window.
+5. Navigated to `User Configuration > Administrative Templates > Control Panel > Prohibit access to Control Panel and PC settings`
+6. Once opened, the policy was enabled and applied.
+
+| Enabling Control Panel restriction.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/15%20enabled%20restrict%20access%20gpo.png)                 |
 
 ## Create Disable USB Storage GPO
-1. open GPMC
-2. right click domain and select create new gpo
-3. name GPO "Desktop Wallpaper"
-4. right click GPO to edit
+1. The `Group Policy Management Console` was re-accessed.
+2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
+3. In the GPO creation window, the new GPO was named "password policy"
+
+| Name USB storage GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/16%20create%20new%20gpo.png)                 |
+
+4. Once created, the GPO was right-clicked to access the editing window.
+5. Navigated to `Computer Configuration > Administrative Templates > System > Removable Storage Access > All Removable Storage Classes: Deny All Access` 
+6. Once opened, the policy was enabled and applied.
