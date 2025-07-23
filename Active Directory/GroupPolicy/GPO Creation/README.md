@@ -25,15 +25,40 @@ Before this lab began a few configuration changes were made to the environment:
 | ![](./Screenshots/0%20prelab%20groups%20setup.png)                 |
 
 ## Creating Password Policy GPO
-1. open GPMC
-2. right click domain and select create new gpo
-3. name GPO "password policy"
-4. right click policy to edit
-5. navigate to Computer Configurations > Policies > Windows Settings > Security Settings > Account Policies > Password Policy
-6. Select the policy to configure
-- Minimum password length
+1. The `Group Policy Management Console` was opened.
+
+| Group Policy Management Console.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/1%20GPMC.png)                 |
+
+2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
+3. In the GPO creation window, the new GPO was named "password policy"
+
+| Name new GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/2%20create%20new%20gpo.png)                 |
+
+4. Once created, the GPO was right-clicked to access the editing window.
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/3%20policy%20editor.png)                 |
+
+5. Navigated to `Computer Configurations > Policies > Windows Settings > Security Settings > Account Policies > Password Policy`.
+
+| Rename PC input in system settings.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/4%20password%20policy.png)                 |
+
+6. The following features were configured:
+- Minimum password length - 12 characters
 - Password must meet complexity requirements
-- Maximum password age
+- Maximum password age - 90 days
+
+| Configure minimum password length.                     								|Configure password complexity.                   								  |Configure maximum password age.|
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|------------|
+| ![](./Screenshots/5%20length.png)                 						|![](./Screenshots/6%20complexuty.png)                					  |![](./Screenshots/7%20password%20age.png)|
+
 
 ## Create Drive Mapping GPO
 1. open GPMC
