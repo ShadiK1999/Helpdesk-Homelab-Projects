@@ -90,9 +90,9 @@ note: there is no actual network drive and only an example path was provided.
 2. The domain location was right-clicked and `Create new gpo` was selected from the menu.
 3. In the GPO creation window, the new GPO was named "Desktop Wallpaper"
 
-| Name Drive Mapping GPO.                     |
+| Name Desktop Wallpaper GPO.                     |
 | ------------------------------------------------------------------------------------- |
-| ![](./Screenshots/)                 |
+| ![](./Screenshots/19%20new%20gpo.png)                 |
 
 4. Once created, the GPO was right-clicked to access the editing window.
 5. Navigated to `User Configuration > Administrative Templates > Desktop > Desktop > Desktop Wallpaper`
