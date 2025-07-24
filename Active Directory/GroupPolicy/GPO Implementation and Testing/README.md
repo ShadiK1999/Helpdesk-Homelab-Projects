@@ -1,5 +1,7 @@
 # GPO Implementation and Testing
 
+This project tests the Group Policy Objects that were created in the previous lab.
+
 ## Systems Used
 
 - Host PC with Hypervisor (VMWare)
@@ -8,10 +10,25 @@
 
 ## Pre-lab Setup 
 
-1. The host PC was logged into using a random user created in a previous lab.
-2. AD Users and Computers was double checked on the DC to confirm that the client PC was part of the domain.
-3. The client PC was moved from default Computers OU to the USA > Computer OU and given a description (following best practices).
-4. The user account being used on the client PC (mchestnut) was moved to the USA > Users OU. 
+1. The host PC was logged into using a user created in a previous lab.
+2. The command prompt was used to confirm that the client PC was part of the domain via the `ipconfig` command.
+
+| Confirm PC is part of domain.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/0%20confirm%20host%20pc%20config.png)                 |
+
+3. The client PC was moved from the default Computers OU to the USA > Computer OU and given a description (following best practices).
+
+| Moving client PC to USA > Computer OU.                     								| Assign description to client PC.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/5%20move%20client%20pc%20to%20USA.png)                 						|![](./Screenshots/6%20give%20pc%20a%20desc.png)                					  |
+
+4. The user account being used on the client PC (mchestnut) was moved to the USA > Users OU.
+
+| Moving user to USA > Users OU.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/7%20move%20user%2010%20USA.png)                 |
+
 5. The Group Policy Management Console was opened on the Domain Controller to view the previously creates GPO's.
 
 ## GPO Implementation
