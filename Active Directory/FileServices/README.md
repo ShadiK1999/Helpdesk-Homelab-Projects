@@ -71,7 +71,7 @@ note: this method does not persist and the network drive will disappear on reboo
 
 note: for in-depth GPO explanations see the [Group Policy Management](https://github.com/ShadiK1999/Helpdesk-Homelab-Projects/tree/main/Active%20Directory/GroupPolicy) projects. 
 
-3. A new mapped drive was configured by right clicking the Drive Maps location and selecting New > Mapped Drive. The location `\\DC\SHARED` was provided in the input field as well as the label SHARED and the drive letter S.
+3. A new mapped drive was configured by right clicking the Drive Maps location and selecting `New > Mapped Drive`. The location `\\DC\SHARED` was provided in the input field as well as the label SHARED and the drive letter S.
 
 | Drive Maps configuration.                     								|Mapping the network drive.                   								  |
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
