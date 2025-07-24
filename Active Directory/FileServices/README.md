@@ -100,15 +100,33 @@ This application be used to configure data quotas and thresholds, file screening
 
 1. Server Manager was opened and the Add Roles and Features wizard was accessed
 2. In the Select Server Roles section, FSRM was selected through File and Storage Services > File and iSCI Services > File Server Resource Manager
+
+| Selecting FSRM in Add ROles and Features.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/14%20add%20roles%20and%20features.png)                 |
+
 3. Defaults were selected for the rest of the wizard and the feature was installed.
+
+| FSRM installed and opened.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/15%20FSRM.png)                 |
 
 ### Quota Management Configuration
 
 This feature sets a quota for the amount of data available within a folder and also can be used to configure threshold notifications for shared folders.
 
 1. Quota Management was opened within the FSRM.
+
+| Quota Management window.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/16%20quota%20management.png)                 |
+
 2. The Create Quote window was opened by right-clicking the Quotas location.
 3. A custom quota of 100MB was set and an email alert was configured when the 80% threshold is passed. This was configured by clicking the custom properties button and adding the configurations within the window.
+
+| Creating custom quota.                     |Configuring threshold with email alert.|
+| ------------------------------------------------------------------------------------- |----------|
+| ![](./Screenshots/18%20create%20quota%20.png)                 |![](./Screenshots/19%20add%20threshold.png)|
 
 ### File Screening Management
 
@@ -116,15 +134,36 @@ This feature controls what file types are allowed on the shared folder.
 
 1. File Screening Management was opened within the FSRM
 2. The Create File Screen window was opened by right-clicking the File Screens location.
-3. The SHARED folder path was inputted in the location field 
+
+| Create File Screen window.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/20%20create%20file%20screen.png)                 |
+
+
+
+3. The `SHARED` folder path was inputted in the location field. 
 4. A custom file screen was created with the following blocks:
 - Audio and Video files
 - Executable files
 - Image files
 - Web Page files
 
-note: different template option can be selected via the dropdown menu instead of creating a custom screen.
+note: different template options for file screens can be selected via the dropdown menu instead of creating a custom screen.
+
+| Creating the custom file screen.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/21%20custom%20screen.png)                 |
  
 5. The custom screen was given the name SHARED
-6. The file screen was tested by attempting to save a screenshot on the client pc to the SHARED folder 
+
+| Custom file screen created.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/22%20verify%20file%20screen.png)                 |
+
+6. The file screen was tested by attempting to save a screenshot on the client pc to the SHARED folder
+
+| Attempt to save image file.                     								|File screen blocks save attempt.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/23%20saving%20image%20attempt.png)                 						|![](./Screenshots/24%20image%20blocked%20.png)                					  |
+
 
