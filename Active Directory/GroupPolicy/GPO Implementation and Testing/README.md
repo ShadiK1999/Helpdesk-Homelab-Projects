@@ -34,8 +34,22 @@ This project tests the Group Policy Objects that were created in the previous la
 ## GPO Implementation
 
 1. Within the Group Police Management Console, the Restrict Control Panel GPO was moved to the USA > Users OU via drag and drop as it is a user configuration GPO.
+
+| Implementing Restrict Control Panel GPO in the USA > Users OU.                     								|GPO implemented.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/2%20restric%20access%20to%20users.png)                 						|![](./Screenshots/3%20gpo%20moved.png)                					  |
+
 2. The same process was utilised to move other previously created GPO's in their respective OU's.
-3. By default there's a 90 minute wait for GPO's to apply, to bypass this the gpupdate /force command was used on the client PC. 
+
+| Remaining GPO's implemented.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/4%20move%20rest%20of%20gpos.png)                 |
+
+3. By default there's a 90 minute wait for GPO's to apply, to bypass this the `gpupdate /force` command was used on the client PC. 
+
+| Using `gpupdate /force` command.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/8%20gpupdate.png)                 |
 
 ## GPO Testing
 
