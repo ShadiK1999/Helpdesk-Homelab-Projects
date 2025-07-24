@@ -23,7 +23,7 @@ This project tests the Group Policy Objects that were created in the previous la
 | ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
 | ![](./Screenshots/5%20move%20client%20pc%20to%20USA.png)                 						|![](./Screenshots/6%20give%20pc%20a%20desc.png)                					  |
 
-4. The user account being used on the client PC (mchestnut) was moved to the USA > Users OU.
+4. The user account being used on the client PC `mchestnut` was moved to the USA > Users OU.
 
 | Moving user to USA > Users OU.                     |
 | ------------------------------------------------------------------------------------- |
@@ -53,8 +53,25 @@ This project tests the Group Policy Objects that were created in the previous la
 
 ## GPO Testing
 
-1. The Restrict Control Panel GPO was tested on the client PC by attempting to open the Control panel
+1. The Restrict Control Panel GPO was tested on the client PC by attempting to open the Control Panel.
+
+| Navigating to Control Panel.                     								| GPO restricting access to Control Panel.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/9%20open%20CP.png)                 						|![](./Screenshots/10%20gpo%20confirmed.png)                					  |
+
 2. The Password Policy GPO was tested by attempting to change the user's password to "password".
+
+| Attempting to update password with invalid password.                     								|GPO not allowing password change.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/11%20attempt%20password%20change.png)                 						|![](./Screenshots/12%20gpo%20confirmed.png)                					  |
+
+note: to test this GPO the Restrict Control Panel GPO has to be temporarily disabled.
+
 3. The Desktop Wallpaper GPO could not be tested as personalisation setting require windows activation and the VM uses an evaluation ISO.
 4. The Disable USB Devices GPO was tested by inserting a USB into the host PC and connecting it to the client PC VM.
+
+| GPO not allowing removable device to be accessed.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/13%20gpo%20confirmed.png)                 |
+
 5. The Drive Mapping GPO could not be tested as there is no real drive connected and a false path was used in the configuration of the GPO purely as an example.
