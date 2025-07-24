@@ -22,7 +22,7 @@ This project demonstrates setting up file sharing services to manage network res
 | ------------------------------------------------------------------------------------- |
 | ![](./Screenshots/1%20create%20folder.png)                 |
 
-2. The SHARED folder's advanced sharing options were access by right-clicking on it and selecting `Properties > Sharing > Advanced Sharing`.
+2. The `SHARED` folder's advanced sharing options were access by right-clicking on it and selecting `Properties > Sharing > Advanced Sharing`.
 
 | Opening folder share properties.                     |
 | ------------------------------------------------------------------------------------- |
@@ -45,12 +45,22 @@ This project demonstrates setting up file sharing services to manage network res
 
 1. NTFS permissions of the SHARED folder were accessed via the Security tab of the folder's properties. Though no permissions were configured here.
 
+| NTFS permissions.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/7%20NTFS.png)                 |
+
+
 ## Sharing Methods
 
 ### Mapped Sharing Method
 
 1. The client PC was logged into using a domain user account.
 2. The SHARED folder was mapped to a network drive via the "Map Network Drive" function in file explorer using the location `\\DC\SHARED`.
+
+| Mapping the network drive.                     | Network drive accessible |
+| ------------------------------------------------------------------------------------- |----------|
+| ![](./Screenshots/8%20map%20network%20drive.png)                 |![](./Screenshots/9%20show%20network%20drive.png)|
+
 
 note: this method does not persist and the network drive will disappear on reboot.
 
@@ -62,9 +72,23 @@ note: this method does not persist and the network drive will disappear on reboo
 note: for in-depth GPO explanations see the [Group Policy Management](https://github.com/ShadiK1999/Helpdesk-Homelab-Projects/tree/main/Active%20Directory/GroupPolicy) projects. 
 
 3. A new mapped drive was configured by right clicking the Drive Maps location and selecting New > Mapped Drive. The location `\\DC\SHARED` was provided in the input field as well as the label SHARED and the drive letter S.
+
+| Drive Maps configuration.                     								|Mapping the network drive.                   								  |
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|
+| ![](./Screenshots/10%20drive%20maps.png)                 						|![](./Screenshots/11%20new%20drive%20properties.png)                					  |
+
 4. After the GPO was created, it was linked to the USA > Users OU.
+
+| Linking the GPO.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/12%20linked%20gpo.png)                 |
+
 5. The client PC was logged into using a domain user account.
 6. File Explorer was opened and in the SHARED folder was present within the Network locations.
+
+| Network drive accessible.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/13%20see%20network%20folder.png)                 |
 
 note: this will persist even after the computer is rebooted.
 
