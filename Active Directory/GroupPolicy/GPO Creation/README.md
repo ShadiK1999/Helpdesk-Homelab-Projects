@@ -136,3 +136,5 @@ note: there is no actual network drive and only an example path was provided.
 4. Once created, the GPO was right-clicked to access the editing window.
 5. Navigated to `Computer Configuration > Administrative Templates > System > Removable Storage Access > All Removable Storage Classes: Deny All Access` 
 6. Once opened, the policy was enabled and applied.
+
+Next lab: GPO implementation and testing.
