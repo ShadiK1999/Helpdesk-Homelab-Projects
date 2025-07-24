@@ -7,26 +7,50 @@ This project demonstrates setting up file sharing services to manage network res
 - File Sharing
 - Shared permissions
 - NTFS permissions 
-- Mapped sharing method
-- Network sharing method
-- Installing and configuring File Server Resource Manager (FSRM)
+- Sharing methods
+    - Mapped sharing
+    - Network sharing
+- File Server Resource Manager (FSRM)
+    - Installation
+    - Configuring quotas and thresholds
+
 ## Configure Shared Permissions on a Folder 
 
 1. On the Domain Controller, a folder was created on the C: drive with the filename SHARED 
-2. The SHARED folder's advanced sharing options were access by right-clicking on it and selecting properties > Sharing > Advanced Sharing
+
+| Creating `SHARED` folder.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/1%20create%20folder.png)                 |
+
+2. The SHARED folder's advanced sharing options were access by right-clicking on it and selecting `Properties > Sharing > Advanced Sharing`.
+
+| Opening folder share properties.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/2%20folder%20properties.png)                 |
+
 3. Network sharing was enabled via the "Share this folder" checkbox. This also enabled permissions configuration for the folder buy clicking the "Permissions" button.
-4. domain users were added to the SHARED folder's access permissions.
 
-##Configure NTFS Permissions
+| Enabling network sharing.                     |
+| ------------------------------------------------------------------------------------- |
+| ![](./Screenshots/3%20advanced%20sharing.png)                 |
 
-1. NTFS permissions of the SHARED folder were accessed via the Security tab of the folder's properties.
+4. Domain users were added to the SHARED folder's access permissions.
+
+| `SHARED` folder permissions.                     								|Adding Domain Users to folder access.                   								  |Permissions with added users|
+| ------------------------------------------------------------------------------------- |-------------------------------------------------------------------------------------|----------|
+| ![](./Screenshots/4%20advanced%20sharing%20permissions.png)                 						|![](./Screenshots/5%20add%20domain%20users.png)                					  |![](./Screenshots/6%20show%20domain%20users.png)|
+
+
+## Configure NTFS Permissions
+
+1. NTFS permissions of the SHARED folder were accessed via the Security tab of the folder's properties. Though no permissions were configured here.
 
 ## Sharing Methods
 
 ### Mapped Sharing Method
 
 1. The client PC was logged into using a domain user account.
-2. The SHARED folder was mapped to a network drive via the "Map Network Drive" function in file explorer using the location \\DC\SHARED.
+2. The SHARED folder was mapped to a network drive via the "Map Network Drive" function in file explorer using the location `\\DC\SHARED`.
 
 note: this method does not persist and the network drive will disappear on reboot.
 
@@ -37,7 +61,7 @@ note: this method does not persist and the network drive will disappear on reboo
 
 note: for in-depth GPO explanations see the [Group Policy Management](https://github.com/ShadiK1999/Helpdesk-Homelab-Projects/tree/main/Active%20Directory/GroupPolicy) projects. 
 
-3. A new mapped drive was configured by right clicking the Drive Maps location and selecting New > Mapped Drive. The location \\DC\SHARED was provided in the input field as well as the label SHARED and the drive letter S.
+3. A new mapped drive was configured by right clicking the Drive Maps location and selecting New > Mapped Drive. The location `\\DC\SHARED` was provided in the input field as well as the label SHARED and the drive letter S.
 4. After the GPO was created, it was linked to the USA > Users OU.
 5. The client PC was logged into using a domain user account.
 6. File Explorer was opened and in the SHARED folder was present within the Network locations.
@@ -51,7 +75,7 @@ This application be used to configure data quotas and thresholds, file screening
 ### Installation
 
 1. Server Manager was opened and the Add Roles and Features wizard was accessed
-2. In the Select Server Roles section, FSRM was selected through File and Storage Services > File and iSCI Servvices > File Server Resource Manager
+2. In the Select Server Roles section, FSRM was selected through File and Storage Services > File and iSCI Services > File Server Resource Manager
 3. Defaults were selected for the rest of the wizard and the feature was installed.
 
 ### Quota Management Configuration
