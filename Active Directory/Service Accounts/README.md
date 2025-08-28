@@ -40,9 +40,10 @@ note: using a special character for the logon name helps to differentiate from u
 | ![](./Screenshots/5%20configure%20autologon.png)                 						| ![](./Screenshots/6%20successsfully%20configures.png)                 					    |
 
 3. After configurations were completed, the system was tested by rebooting.
-|   Client PC automatically logs into service account.                                            |
-| ----------------------------------------------|
-| ![](./Screenshots/7%20autologin%20success.png)                 						|
+
+|Client PC automatically logs into service account.|
+|--------|
+|![](./Screenshots/7%20autologin%20success.png)|
 
 ## Setup browser for automatic startup
 
